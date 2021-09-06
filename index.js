@@ -9,6 +9,32 @@ const questions = []
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) { 
     console.log (data.license, data.title, data.use)
+
+    const { title, description, install, use, credit, contribute, tests, license} = data
+    const html = 
+    `#${title} 
+
+    ## Description
+    ${description}
+    
+    ## Installation Instructions
+    ${install}
+    
+    ## Usage Information
+    ${use}
+
+    ## Credits
+    ${credit}
+    
+    ## How to Contribute
+    ${contribute}
+    
+    ## Test Instructions
+    ${tests}
+
+    ## License
+    ${license}`
+
 }
 
 // TODO: Create a function to initialize app
