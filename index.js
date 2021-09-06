@@ -35,6 +35,9 @@ function writeToFile(fileName, data) {
     ## License
     ${license}`
 
+    fs.writeFile(fileName, html, (err) =>
+    err ? console.log(err) : console.log('Success!')
+);
 }
 
 // TODO: Create a function to initialize app
@@ -85,7 +88,7 @@ function init() {
         ])
 
         .then((data) => {
-            const fileName = `${data.title.toLowerCase().split(' ').join('')}.MD`;
+            const fileName = `${data.title.toLowerCase().split(' ').join('')}.md`;
             writeToFile(fileName, data)
         });
 
