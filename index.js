@@ -7,7 +7,9 @@ const questions = []
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
+function writeToFile(fileName, data) { 
+    console.log (data.license, data.title, data.use)
+}
 
 // TODO: Create a function to initialize app
 function init() {
@@ -53,8 +55,13 @@ function init() {
                 name: 'license',
                 message: 'Which license would you like to use for this project?',
                 choices: ['MIT', 'Boost Software 1.0', 'Apache 2.0', 'Mozilla Public', 'GNU LGPLv3', 'GNU GPLv3', 'GNU AGPLv3']
-            },        
+            },
         ])
+
+        .then((data) => {
+            const fileName = `${data.title.toLowerCase().split(' ').join('')}.MD`;
+            writeToFile(fileName, data)
+        });
 
 }
 
