@@ -10,9 +10,41 @@ const questions = []
 function writeToFile(fileName, data) { 
     console.log (data.license, data.title, data.use)
 
-    const { title, description, install, use, credit, contribute, tests, license} = data
+    const { title, description, install, use, credit, contribute, tests, license, github, email} = data
+
+    switch (license) {
+        case 'MIT':
+            badge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+            licenseCopy =' '
+            break;
+        case 'Boost Software 1.0':
+            badge = `[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`;
+            licenseCopy =' '
+            break; 
+        case 'Apache 2.0':
+            badge = `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+            licenseCopy =' '
+            break;
+        case  'Mozilla Public':
+            badge = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`;
+            licenseCopy =' '
+            break;
+        case 'GNU LGPLv3':
+            badge = `[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)`;
+            licenseCopy =' '
+            break;
+        case 'GNU GPLv3':
+            badge = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`;
+            licenseCopy =' '
+            break;
+        case 'GNU AGPLv3':
+            badge = `[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)`;
+            licenseCopy =' '
+            break;
+    }
+
     const html = 
-    `#${title} 
+    `#${title}                      ${badge}
 
     ## Description
     ${description}
@@ -32,13 +64,18 @@ function writeToFile(fileName, data) {
     ## Test Instructions
     ${tests}
 
+    ## Test Instructions
+    For further questions regarding this project, you can find my github at ${github} 
+    or email directly at ${email}
+
     ## License
-    ${license}`
+    ${licenseCopy}`
 
     fs.writeFile(fileName, html, (err) =>
     err ? console.log(err) : console.log('Success!')
 );
 }
+
 
 // TODO: Create a function to initialize app
 function init() {
@@ -80,10 +117,30 @@ function init() {
                 message: 'Go the extra mile and write tests for your application. Then provide examples on how to run them here.',
             },
             {
+                type: 'input',
+                name: 'email',
+                message: 'What is your email? (So people may contact you with questions)',
+            },
+            {
+                type: 'input',
+                name: 'github',
+                message: 'What is your github url? (so people may contact you with questions)',
+            },
+            {
                 type: 'list',
                 name: 'license',
                 message: 'Which license would you like to use for this project?',
                 choices: ['MIT', 'Boost Software 1.0', 'Apache 2.0', 'Mozilla Public', 'GNU LGPLv3', 'GNU GPLv3', 'GNU AGPLv3']
+            },
+            {
+                type: 'input',
+                name: 'name',
+                message: "Please enter your full name (for licensing)",
+            },
+            {
+                type: 'input',
+                name: 'date',
+                message: "Please enter today's date (for licensing)",
             },
         ])
 
