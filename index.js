@@ -1,12 +1,10 @@
-// TODO: Include packages needed for this application
 
-// TODO: Create an array of questions for user input
 const fs = require('fs')
 const inquirer = require('inquirer')
-const questions = []
 
 
-// TODO: Create a function to write README file
+
+//writeToFile parses user data and creates
 function writeToFile(fileName, data) { 
     console.log (data.license, data.title, data.use)
 
@@ -139,7 +137,7 @@ function writeToFile(fileName, data) {
     ## Test Instructions
     ${tests}
 
-    ## Test Instructions
+    ## Contact
     For further questions regarding this project, you can find my github at ${github} 
     or email directly at ${email}
 
@@ -152,7 +150,7 @@ function writeToFile(fileName, data) {
 }
 
 
-// TODO: Create a function to initialize app
+// inquirer prompts for gathering user input
 function init() {
     inquirer
         .prompt([
@@ -218,7 +216,7 @@ function init() {
                 message: "Please enter today's date (for licensing)",
             },
         ])
-
+// .then creates fileName and passes fileName data to writeToFile function 
         .then((data) => {
             const fileName = `${data.title.toLowerCase().split(' ').join('')}.md`;
             writeToFile(fileName, data)
