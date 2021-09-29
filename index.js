@@ -115,7 +115,7 @@ function writeToFile(fileName, data) {
             GNU Affero General Public License for more details. See https://www.gnu.org/licenses/ `
             break;
     }
-
+// sets all README html 
     const html = 
     `#${title}                      ${badge}
 
@@ -138,7 +138,7 @@ function writeToFile(fileName, data) {
     ${tests}
 
     ## Contact
-    For further questions regarding this project, you can find my github at ${github} 
+    For further questions regarding this project, you can find my github at https://github.com/${github}/ 
     or email directly at ${email}
 
     ## License
@@ -197,7 +197,7 @@ function init() {
             {
                 type: 'input',
                 name: 'github',
-                message: 'What is your github url? (so people may contact you with questions)',
+                message: 'What is your github username? (so people may contact you with questions)',
             },
             {
                 type: 'list',
