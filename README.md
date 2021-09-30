@@ -1,28 +1,47 @@
-#ReadME Generator                      [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# ReadME Generator                      [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-    ## Description
+## Table of Contents 
+
+* [Description](#Description)
+
+* [Installation](#Installation)
+
+* [Usage](#Usage)
+
+* [Credits](#Credits)
+
+* [Contribute](#Contribute)
+
+* [Tests](#Tests)
+
+* [Contact](#Contact)
+
+* [License](#License)
+
+# Description
     This program generates README files for your projects
     
-    ## Installation Instructions
+# Installation
     Installation is simple, just download and run the index file through a nodeJS compatible commandline interface
     
-    ## Usage Information
+# Usage
     First make sure to install inquirer through npm, then simply navigate into the relevant directory and run node index.js
+    https://youtu.be/b0hQLo6HkKg
 
-    ## Credits
+# Credits
     Starter code was provided by instructor, and this program utilizes NodeJS, npm, and inquirer. 
     
-    ## How to Contribute
+# Contribute
     Feel free. 
     
-    ## Test Instructions
+# Tests
     No tests provided.
 
-    ## Contact
+# Contact
     For further questions regarding this project, you can find my github at https://github.com/Ez-M 
     or email directly at martinez.ezequiel42@gmail.com
 
-    ## License
+# License
      Copyright September 6, 2021  Ezequiel Martinez
 
             Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the 

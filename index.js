@@ -123,15 +123,15 @@ function writeToFile(fileName, data) {
 
 * [Description](##Description)
 
-* [Installation](##Installation Instructions)
+* [Installation](##Installation)
 
 * [Usage](##Usage Information)
 
 * [Credits](##Credits)
 
-* [How to Contribute](##How to Contribute)
+* [Contribute](##Contribute)
 
-* [Test Instructions](##Test Instructions)
+* [Tests](##Tests)
 
 * [Contact](##Contact)
 
@@ -140,7 +140,7 @@ function writeToFile(fileName, data) {
     ## Description
     ${description}
     
-    ## Installation Instructions
+    ## Installation
     ${install}
     
     ## Usage Information
@@ -149,10 +149,10 @@ function writeToFile(fileName, data) {
     ## Credits
     ${credit}
     
-    ## How to Contribute
+    ## Contribute
     ${contribute}
     
-    ## Test Instructions
+    ## Tests
     ${tests}
 
     ## Contact
