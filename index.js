@@ -119,6 +119,24 @@ function writeToFile(fileName, data) {
     const html = 
     `#${title}                      ${badge}
 
+    ## Table of Contents 
+
+* [Description](##Description)
+
+* [Installation](##Installation Instructions)
+
+* [Usage](##Usage Information)
+
+* [Credits](##Credits)
+
+* [How to Contribute](##How to Contribute)
+
+* [Test Instructions](##Test Instructions)
+
+* [Contact](##Contact)
+
+* [License](##License)
+
     ## Description
     ${description}
     
